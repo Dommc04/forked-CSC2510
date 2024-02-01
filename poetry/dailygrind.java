@@ -8,6 +8,13 @@ boolean away_the_hours = true;
 
 while (away_the_hours) {
   boolean away_the_hours = true;
+
+  try {
+      Thread.sleep(60000);
+ } catch (InterruptedException e) {
+ 	// ignore
+ )
+
  
   Date now = new Date();
   its_time_to_go_home = now.getHours() > 17
