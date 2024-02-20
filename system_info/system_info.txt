@@ -1,5 +1,5 @@
 System information has been gathered. Here’s the summary:
-02/20/2024 12:28:29 CST
+02/20/2024 12:43:33 CST
 Current user: Dommc
 Current working directory: /c/Users/Dommc/Documents/GitHub/forked-CSC2510
 System usage (top -bn1):
