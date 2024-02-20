@@ -1,0 +1,10 @@
+System information has been gathered. Here’s the summary:
+02/20/2024 13:10:02 CST
+Current user: Dommc
+Current working directory: /c/Users/Dommc/Documents/GitHub/forked-CSC2510
+System usage:
+
+Disk usage:
+Filesystem            Size  Used Avail Use% Mounted on
+C:/Program Files/Git  931G  796G  136G  86% /
+F:                    1.9T  204G  1.7T  11% /f
