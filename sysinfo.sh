@@ -1,39 +1,17 @@
 #!/bin/bash
-
-# I. Create a new branch
-git checkout -b Lab06
-
-# II. Make a new directory if it doesn't exist
-mkdir -p system_info
-
-# III. Set the file path
-file_path="system_info/system_info.txt"
-
-# IV. Gather system information and write to the file
-echo "System information has been gathered. Here’s the summary:" > $file_path
-echo "$(date +"%m/%d/%Y %H:%M:%S %Z")" >> $file_path
-echo "Current user: $(whoami)" >> $file_path
-echo "Current working directory: $(pwd)" >> $file_path
-echo "System usage (top -bn1):" >> $file_path
-top -bn1 -o %CPU -w 512 | tail -n +8 | head -n 5 >> $file_path
-echo "Disk usage (df -h):" >> $file_path
-df -h >> $file_path
-
-# V. Print contents to the terminal
-cat $file_path
-
-# VI. Create a new PR to merge Lab06 into main
+echo "System information has been gathered. Here’s the summary:" > system_info.txt
+echo "$(date +"%m/%d/%Y %H:%M:%S %Z")" >> system_info.txt
+echo "Current user: $(whoami)" >> system_info.txt
+echo "Current working directory: $(pwd)" >> system_info.txt
+echo "System usage:" >> system_info.txt
+top -b -n 1 | head -n 5 >> system_info.txt
+echo "" >> system_info.txt
+echo "Disk usage:" >> system_info.txt
+df -h >> system_info.txt
+cat system_info.txt
 git add .
 git commit -m "Add sysinfo.sh script"
 git push origin Lab06
-
-# Create a pull request in GitHub (manually)
-
-# Merge the PR in GitHub (manually)
-
-# Merge main into dev (manually)
-
-# Tag the merge commit
 git checkout main
 git merge Lab06
 git tag L.06
