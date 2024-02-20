@@ -15,7 +15,7 @@ echo "$(date +"%m/%d/%Y %H:%M:%S %Z")" >> $file_path
 echo "Current user: $(whoami)" >> $file_path
 echo "Current working directory: $(pwd)" >> $file_path
 echo "System usage (top -bn1):" >> $file_path
-top -bn1 | awk 'NR<=5' >> $file_path
+top -bn1 -o %CPU -w 512 | tail -n +8 | head -n 5 >> $file_path
 echo "Disk usage (df -h):" >> $file_path
 df -h >> $file_path
 
