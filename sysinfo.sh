@@ -9,10 +9,4 @@ echo "" >> system_info.txt
 echo "Disk usage:" >> system_info.txt
 df -h >> system_info.txt
 cat system_info.txt
-git add .
-git commit -m "Add sysinfo.sh script"
-git push origin Lab06
-git checkout main
-git merge Lab06
-git tag L.06
-git push origin main --tags
+
