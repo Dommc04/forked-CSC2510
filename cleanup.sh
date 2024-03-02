@@ -35,6 +35,7 @@ done
 
 echo "Moving files into their respective directories..."
 
+# now we find the files
 
 for file in my_directory/*; do 
 
@@ -133,18 +134,6 @@ echo "Total moved: ${Thine_files[documents]}"
 echo "Total size: ${Thine_files[documents]} bytes"
 if [ "$moved" -ne 0 ]; then
 
-    average_documents=$((Thine_files[documents] / The_grid[documents]))
-    echo "Average file size: $average_documents bytes"
-else
-    echo "No files moved in the Documents category."
-fi
-
-echo "**PDFs**"
-echo "Total moved: ${Thine_files[pdfs]}"
-echo "Total size: ${Thine_files[pdfs]} bytes"
-
-if [ "$moved" -ne 0 ]; then
-
     average_pdfs=$((Thine_files[pdfs] / The_grid[pdfs]))
     echo "Average file size: $average_pdfs bytes"
 else
@@ -182,4 +171,17 @@ if [ "$moved" -ne 0 ]; then
     echo "Average file size: $average_unknown bytes"
 else
     echo "No files moved in the unknown category."
+    if  [ "$moved" -ne 0 ]; then
+
+    average_documents=$((Thine_files[documents] / The_grid[documents]))
+    echo "Average file size: $average_documents bytes"
+else
+    echo "No files moved in the Documents category."
+fi
+
+echo "**PDFs**"
+echo "Total moved: ${Thine_files[pdfs]}"
+echo "Total size: ${Thine_files[pdfs]} bytes"
+
+
 fi
