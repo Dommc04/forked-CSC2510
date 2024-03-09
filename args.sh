@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Display the name of the calling program
+#name of program
 echo "Calling program: $0"
 
-# Display the number of positional parameters
+#number of params
 echo "Number of positional parameters: $#"
 
-# Display the list of positional parameters
+#number of positional params
 echo "List of positional parameters: $*"
